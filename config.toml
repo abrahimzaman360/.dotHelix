@@ -1,0 +1,46 @@
+theme = "catppuccin_mocha"
+
+[editor]
+mouse = false
+cursorline = true
+auto-format = true
+bufferline = "always"
+auto-completion=true
+auto-save=true
+gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
+soft-wrap.enable = true
+end-of-line-diagnostics = "hint"
+
+[keys.normal]
+S-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+S-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = ["mode", "spinner", "file-modification-indicator", "read-only-indicator"]
+center = ["file-name"]
+right = ["diagnostics", "register", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "LOCKED"
+mode.insert = "WORKING"
+mode.select = "VISUAL SEL"
+
+[editor.lsp]
+enable=true
+auto-signature-help=true
+display-messages = true
+
+[editor.indent-guides]
+render = true
+character = "┊"
+skip-levels = 1
+
+[editor.inline-diagnostics]
+cursor-line = "warning" # show warnings and errors on the cursorline inline

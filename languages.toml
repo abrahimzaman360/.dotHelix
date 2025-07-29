@@ -1,0 +1,70 @@
+# RUST
+[[language]]
+name = "rust"
+auto-format = true
+indent = { tab-width = 3, unit = "t" }
+formatter = { command = "rustfmt" }
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config]
+inlayHints.bindingModeHints.enable = false
+inlayHints.closingBraceHints.minLines = 10
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.hideClosureInitialization = false
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+
+# HTML
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server"]
+
+[language-server.vscode-html-language-server]
+command = "vscode-html-language-server"
+args = ["--stdio"]
+
+# CSS
+[[language]]
+name = "css"
+language-servers = ["vscode-css-language-server"]
+
+[language-server.vscode-css-language-server]
+command = "vscode-css-language-server"
+args = ["--stdio"]
+
+# JavaScript
+[[language]]
+name = "javascript"
+language-servers = ["typescript-language-server"]
+
+# TypeScript
+[[language]]
+name = "typescript"
+language-servers = ["typescript-language-server"]
+
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
+
+# Python
+[[language]]
+name = "python"
+language-servers = ["ruff"]
+
+# Typst
+[[language]]
+name = "typst"
+language-servers = ["tinymist"]
+
+[language-server.tinymist]
+command = "tinymist"
+config = { exportPdf = "onType", outputPath = "$root/target/$dir/$name" }
